@@ -1,0 +1,76 @@
+identity:
+  name: mem_dm_add_memory
+  author: Echo0ff
+  label:
+    en_US: Add Memory (mem-dm)
+    zh_Hans: 添加记忆（mem-dm）
+    pt_BR: Adicionar Memória (mem-dm)
+description:
+  human:
+    en_US: Add memory using mem-dm provider
+    zh_Hans: 通过 mem-dm 提供方添加记忆
+    pt_BR: Adicionar memória usando mem-dm
+  llm: Add memory using mem-dm provider
+parameters:
+  - name: content
+    type: string
+    required: true
+    label:
+      en_US: Content
+      zh_Hans: 内容
+      pt_BR: Conteúdo
+    human_description:
+      en_US: Text content for messages[0].content.
+      zh_Hans: 用于 messages[0].content 的文本。
+      pt_BR: Texto para messages[0].content.
+    form: llm
+  - name: user_id
+    type: string
+    required: true
+    label:
+      en_US: User ID
+      zh_Hans: 用户ID
+      pt_BR: ID do Usuário
+    human_description:
+      en_US: User ID
+      zh_Hans: 用户ID
+      pt_BR: ID do Usuário
+    llm_description: User ID
+    form: llm
+  - name: agent_id
+    type: string
+    required: false
+    label:
+      en_US: Agent ID
+      zh_Hans: Agent ID
+    form: llm
+    human_description:
+      en_US: Optional agent identifier.
+      zh_Hans: 可选的代理标识。
+    llm_description: Optional agent identifier.
+  - name: run_id
+    type: string
+    required: false
+    label:
+      en_US: Run ID
+      zh_Hans: Run ID
+    form: llm
+    human_description:
+      en_US: Optional run identifier.
+      zh_Hans: 可选的运行标识。
+    llm_description: Optional run identifier.
+  - name: metadata
+    type: string
+    required: false
+    label:
+      en_US: Metadata
+      zh_Hans: 元数据
+    form: llm
+    human_description:
+      en_US: Optional metadata in JSON string, e.g. {"lang":"zh"}.
+      zh_Hans: 可选元数据，JSON 字符串，例如 {"lang":"zh"}。
+    llm_description: Optional metadata in JSON string.
+extra:
+  python:
+    source: tools/add_memory.py
+

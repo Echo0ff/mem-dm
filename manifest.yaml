@@ -1,0 +1,44 @@
+version: 0.0.1
+type: plugin
+author: Echo0ff
+name: mem-dm
+label:
+  en_US: mem-dm
+  ja_JP: mem-dm
+  zh_Hans: mem-dm
+  pt_BR: mem-dm
+description:
+  en_US: long memory
+  ja_JP: long memory
+  zh_Hans: long memory
+  pt_BR: long memory
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/mem-dm.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-08-27T17:38:27.131615+08:00
+privacy: PRIVACY.md
+verified: false

@@ -1,0 +1,75 @@
+identity:
+  author: "Echo0ff"
+  name: "mem-dm"
+  label:
+    en_US: "mem-dm"
+    zh_Hans: "mem-dm"
+    pt_BR: "mem-dm"
+  description:
+    en_US: "long memory"
+    zh_Hans: "long memory"
+    pt_BR: "long memory"
+  icon: "icon.svg"
+
+credentials_for_provider:
+  base_url:
+    type: "text-input"
+    required: true
+    label:
+      en_US: "Base URL"
+      zh_Hans: "服务地址"
+      pt_BR: "URL Base"
+    placeholder:
+      en_US: "e.g. http://47.99.246.108:18888"
+      zh_Hans: "如 http://47.99.246.108:18888"
+    default: "http://47.99.246.108:18888"
+  
+
+#########################################################################################
+# If you want to support OAuth, you can uncomment the following code.
+#########################################################################################
+# oauth_schema:
+#   client_schema:
+#     - name: "client_id"
+#       type: "secret-input"
+#       required: true
+#       url: https://example.com/oauth/authorize
+#       placeholder:
+#         en_US: "Please input your Client ID"
+#         zh_Hans: "请输入你的 Client ID"
+#         pt_BR: "Insira seu Client ID"
+#       help:
+#         en_US: "Client ID is used to authenticate requests to the example.com API."
+#         zh_Hans: "Client ID 用于认证请求到 example.com API。"
+#         pt_BR: "Client ID é usado para autenticar solicitações à API do example.com."
+#       label:
+#         zh_Hans: "Client ID"
+#         en_US: "Client ID"
+#     - name: "client_secret"
+#       type: "secret-input"
+#       required: true
+#       url: https://example.com/oauth/authorize
+#       placeholder:
+#         en_US: "Please input your Client Secret"
+#         zh_Hans: "请输入你的 Client Secret"
+#         pt_BR: "Insira seu Client Secret"
+#       help:
+#         en_US: "Client Secret is used to authenticate requests to the example.com API."
+#         zh_Hans: "Client Secret 用于认证请求到 example.com API。"
+#         pt_BR: "Client Secret é usado para autenticar solicitações à API do example.com."
+#       label:
+#         zh_Hans: "Client Secret"
+#         en_US: "Client Secret"
+#   credentials_schema:
+#     - name: "access_token"
+#       type: "secret-input"
+#       label:
+#         zh_Hans: "Access Token"
+#         en_US: "Access Token"
+
+tools:
+  - tools/add_memory.yaml
+  - tools/retrieve_memory.yaml
+extra:
+  python:
+    source: provider/mem-dm.py

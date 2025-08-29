@@ -1,0 +1,99 @@
+identity:
+  name: mem_dm_retrieve_memory
+  author: Echo0ff
+  label:
+    en_US: Retrieve Memory (mem-dm)
+    zh_Hans: 检索记忆（mem-dm）
+    pt_BR: Recuperar Memória (mem-dm)
+description:
+  human:
+    en_US: Search and retrieve memory using mem-dm provider
+    zh_Hans: 通过 mem-dm 提供方搜索和检索记忆
+    pt_BR: Pesquisar e recuperar memória usando mem-dm
+  llm: Search and retrieve memory using mem-dm provider
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: The query string to search memories.
+      zh_Hans: 用于搜索记忆的查询语句。
+      pt_BR: A string de consulta para buscar memórias.
+    llm_description: The query string to search memories.
+    form: llm
+  - name: user_id
+    type: string
+    required: true
+    label:
+      en_US: User ID
+      zh_Hans: 用户ID
+      pt_BR: ID do Usuário
+    human_description:
+      en_US: User ID
+      zh_Hans: 用户ID
+      pt_BR: ID do Usuário
+    llm_description: User ID
+    form: llm
+  - name: run_id
+    type: string
+    required: false
+    label:
+      en_US: Run ID
+      zh_Hans: Run ID
+    form: llm
+    human_description:
+      en_US: Optional run identifier.
+      zh_Hans: 可选的运行标识。
+    llm_description: Optional run identifier.
+  - name: agent_id
+    type: string
+    required: false
+    label:
+      en_US: Agent ID
+      zh_Hans: Agent ID
+    form: llm
+    human_description:
+      en_US: Optional agent identifier.
+      zh_Hans: 可选的代理标识。
+    llm_description: Optional agent identifier.
+  - name: filters
+    type: string
+    required: false
+    label:
+      en_US: Filters
+      zh_Hans: 过滤条件
+    form: llm
+    human_description:
+      en_US: Optional filters in JSON string.
+      zh_Hans: 可选过滤条件，JSON 字符串。
+    llm_description: Optional filters in JSON string.
+  - name: limit
+    type: number
+    required: false
+    label:
+      en_US: Limit
+      zh_Hans: 返回条数
+    form: llm
+    human_description:
+      en_US: Optional limit of results.
+      zh_Hans: 可选的返回数量上限。
+    llm_description: Optional limit of results.
+  - name: threshold
+    type: number
+    required: false
+    label:
+      en_US: Threshold
+      zh_Hans: 阈值
+    form: llm
+    human_description:
+      en_US: Optional threshold for score filtering.
+      zh_Hans: 可选的分数阈值。
+    llm_description: Optional threshold for score filtering.
+extra:
+  python:
+    source: tools/retrieve_memory.py
+
