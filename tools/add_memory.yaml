@@ -1,6 +1,6 @@
 identity:
   name: mem_dm_add_memory
-  author: Echo0ff
+  author: echo0ff
   label:
     en_US: Add Memory (mem-dm)
     zh_Hans: 添加记忆（mem-dm）

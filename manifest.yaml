@@ -1,6 +1,6 @@
 version: 0.0.1
 type: plugin
-author: Echo0ff
+author: echo0ff
 name: mem-dm
 label:
   en_US: mem-dm
